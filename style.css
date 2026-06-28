@@ -6,174 +6,231 @@
 }
 
 body{
-    background:#fff;
+    background:#f5f5f5;
+    display:flex;
 }
 
-/* Sidebar */
-
 .sidebar{
-
     width:90px;
-    height:100vh;
-
-    position:fixed;
-    left:0;
+    min-height:100vh;
+    position:sticky;
     top:0;
-
     border-right:1px solid #ddd;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
     background:white;
+    padding:20px 0;
 }
 
 .logo{
-
     width:45px;
     height:45px;
-
-    margin:20px 0 40px;
+    margin-bottom:30px;
+    object-fit:contain;
 }
 
-.logo img{
-
-    width:100%;
+.icon-box{
+    position:relative;
+    margin:10px 0;
 }
 
 .sidebar a{
-
     width:50px;
     height:50px;
-
     border-radius:50%;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-decoration:none;
     color:black;
-
-    margin:10px 0;
-
     transition:.3s;
 }
 
-.sidebar a:hover{
-
-    background:#efefef;
-}
-
+.sidebar a:hover,
 .sidebar a.active{
-
     background:black;
     color:white;
 }
 
 .sidebar .material-icons-outlined{
-
     font-size:30px;
 }
 
-.bottom{
-
-    margin-top:auto;
-    margin-bottom:20px;
+.tooltip{
+    position:absolute;
+    left:60px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#111;
+    color:white;
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:12px;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
 }
 
+.icon-box:hover .tooltip{
+    opacity:1;
+}
 
-/* Top Bar */
+.bottom{
+    margin-top:auto;
+}
+
+.page{
+    flex:1;
+    min-height:100vh;
+}
 
 .topbar{
-
-    position:fixed;
-
-    left:90px;
-    top:0;
-
-    width:calc(100% - 90px);
-    height:80px;
-
-    background:white;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:0 25px;
-
+    padding:20px 30px;
+    background:white;
     border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
-/* Search */
-
 .search-box{
-
     width:82%;
     height:50px;
-
     background:#efefef;
-
     border-radius:30px;
-
     display:flex;
     align-items:center;
-
     padding:0 18px;
+    gap:10px;
 }
 
 .search-box input{
-
     width:100%;
-
     border:none;
     outline:none;
-
     background:none;
-
     font-size:18px;
-
-    margin-left:10px;
 }
 
 .top-icons{
-
     display:flex;
     align-items:center;
     gap:20px;
 }
 
-.top-icons span{
-
-    font-size:30px;
+.top-icons span,
+.profile{
     cursor:pointer;
 }
 
 .profile{
-
-    width:42px;
-    height:42px;
-
+    width:44px;
+    height:44px;
     border-radius:50%;
-
-    background:#ffd6f8;
-
+    background:#ffdae8;
     display:flex;
     justify-content:center;
     align-items:center;
-
     font-weight:bold;
 }
 
-
-/* Main Content */
-
 .content{
+    padding:24px 30px 40px;
+}
 
-    margin-left:90px;
-    margin-top:80px;
+.heading{
+    padding:10px 0 20px;
+}
 
-    padding:30px;
+.heading h1{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.heading p{
+    color:#666;
+    font-size:18px;
+}
+
+.gallery{
+    column-count:3;
+    column-gap:20px;
+}
+
+.card{
+    position:relative;
+    margin-bottom:20px;
+    break-inside:avoid;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    display:block;
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    opacity:0;
+    transition:.3s;
+    padding:16px;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+.overlay button{
+    background:#E60023;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    background:rgba(255,255,255,0.95);
+    color:#111;
+    border-radius:50%;
+    text-decoration:none;
+}
+
+.tall img{
+    height:520px;
+    object-fit:cover;
+}
+
+@media (max-width: 900px){
+    .gallery{ column-count:2; }
+}
+
+@media (max-width: 600px){
+    .sidebar{ width:70px; }
+    .topbar{ padding:16px 20px; }
+    .search-box{ width:100%; }
+    .gallery{ column-count:1; }
+    .content{ padding:20px; }
 }
