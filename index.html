@@ -1,146 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest Explore</title>
+    <title>Pinterest Explorer</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
-
 <body>
-
-    <div class="main-content">
-
-    <!-- Navbar -->
-
-    <nav>
-
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search ideas">
-            <div class="search-actions">
-                <i class="fa-solid fa-camera"></i>
-                <i class="fa-solid fa-microphone"></i>
-            </div>
-        </div>
-
-        <div class="profile"></div>
-
-    </nav>
-
-    <!-- Explore Heading -->
-
-    <section class="heading">
-
-        <h1>Explore</h1>
-
-        <p>Discover new ideas and inspiration</p>
-        <p>Explore trending pins!</p>
-
-    </section>
-
-    <!-- Image Gallery -->
-
-    <section class="gallery">
-
-        <div class="card">
-            <img src="IMAGES/img1.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img1.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMAGES/img2.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img2.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card tall">
-            <img src="IMAGES/img3.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img3.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMAGES/img4.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img4.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMAGES/img5.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img5.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card tall">
-            <img src="IMAGES/img6.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img6.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMAGES/img7.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img7.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMAGES/img8.png">
-            <div class="overlay">
-                <button>Save</button>
-                <a href="IMAGES/img8.png" download class="download-btn">
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
-        </div>
-
-    </section>
-
-    </div>
-
-   <!---sidebar-->
-
-      <aside class="sidebar">
-
-        <div class="sidebar-logo"><i class="fa-brands fa-pinterest"></i></div>
+    <aside class="sidebar">
+        <img src="pinteresrt_icon.png" class="logo" alt="Pinterest logo">
 
         <div class="icon-box">
             <a href="index.html" class="active">
@@ -185,19 +56,101 @@
         </div>
 
         <div class="bottom">
-
             <div class="icon-box">
                 <a href="settings.html">
                     <span class="material-icons-outlined">settings</span>
                 </a>
                 <span class="tooltip">Settings</span>
             </div>
-
         </div>
-
     </aside>
 
+    <div class="page">
+        <header class="topbar">
+            <div class="search-box">
+                <span class="material-icons-outlined search-icon">search</span>
+                <input type="text" placeholder="Search ideas">
+                <div class="top-icons">
+                    <span class="material-icons-outlined">photo_camera</span>
+                    <span class="material-icons-outlined">mic</span>
+                </div>
+            </div>
+            <div class="profile">M</div>
+        </header>
 
+        <main class="content">
+            <section class="heading">
+                <h1>Explore</h1>
+                <p>Discover new ideas and inspiration</p>
+            </section>
+
+            <section class="gallery">
+                <div class="card">
+                    <img src="images/img1.png" alt="Inspiration pin 1">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img1.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/img2.png" alt="Inspiration pin 2">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img2.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card tall">
+                    <img src="images/img3.png" alt="Inspiration pin 3">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img3.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/img4.png" alt="Inspiration pin 4">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img4.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/img5.png" alt="Inspiration pin 5">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img5.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card tall">
+                    <img src="images/img6.png" alt="Inspiration pin 6">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img6.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/img7.png" alt="Inspiration pin 7">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img7.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/img8.png" alt="Inspiration pin 8">
+                    <div class="overlay">
+                        <button>Save</button>
+                        <a href="images/img8.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
-
+</html>
 </html>
