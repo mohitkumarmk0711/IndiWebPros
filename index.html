@@ -3,126 +3,737 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest Login</title>
+    <title>Pinterest Clone</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Material Icons -->
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-    <div class="login-page">
+<!-- ======================================================
+                    LOGIN PAGE
+======================================================= -->
 
-        <div class="login-container">
+<section id="login-page" class="login-page">
 
-            <!-- Close Button -->
-            <a href="homepage.html" class="close-btn">&times;</a>
+    <div class="login-container">
 
-            <!-- Logo -->
-            <img src="pinteresrt_icon.png" alt="Pinterest Logo" class="login-logo">
+        <img src="pinterest_icon.png"
+        class="login-logo"
+        alt="Pinterest">
 
-            <!-- Heading -->
-            <h1>Welcome to Pinterest</h1>
+        <h1 id="welcomeheading">Welcome to Pinterest</h1>
 
-            <p class="subtitle">
-                Log in to discover more ideas just for you
-            </p>
+        <div class="auth-toggle">
 
-            <!-- Login Form -->
-            <form action="homepage.html">
+         <button class="toggle-btn active" id="loginToggle">
+            Log In
+        </button>
 
-                <label>Email</label>
+        <button class="toggle-btn" id="signupToggle">
+            Sign Up
+        </button>
+
+        </div>
+
+        <form id="loginForm">
+            <div class="name-field hidden" id="nameField">
+
+              <label>Name</label>
+
+              <input
+              type="text"
+                placeholder="Enter your name">
+
+            </div>
+            <label>Email</label>
+
+            <input
+            type="email"
+            placeholder="Enter Email"
+            required>
+
+            <label>Password</label>
+
+            <div class="password-box">
 
                 <input
-                    type="email"
-                    placeholder="Email"
-                    required>
+                type="password"
+                placeholder="Password"
+                required>
 
-                <label>Password</label>
+                <span class="material-icons-outlined">
+                    visibility
+                </span>
 
-                <div class="password-box">
+            </div>
 
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        required>
+            <a href="#" class="forgot" id="forgotPassword">
+                Forgot Password?
+            </a>
 
-                    <span class="material-icons-outlined">
-                        visibility
-                    </span>
-
-                </div>
-
-                <a href="#" class="forgot">
-                    Forgot password?
-                </a>
-
-                <button type="submit" class="login-btn">
-                    Log in
-                </button>
-
-            </form>
-
-            <p class="or">
-                OR
-            </p>
-
-            <!-- Google Button -->
-
-            <button class="google-btn">
-
-                <img src="googleimage.png" alt="Google">
-
-                Continue with Google
-
+            <button
+            type="submit"
+            class="login-btn"
+            id="submitBtn">
+                Log In
             </button>
 
-            <!-- QR Section -->
+        </form>
 
-            <div class="qr-box">
+        <p class="or">OR</p>
 
-                <h3>Log in instantly</h3>
+        <button class="google-btn">
 
-                <p>
-                    Scan this QR code with your phone to log in on the app.
-                </p>
+            <img src="googleimage.png">
 
-                <div class="qr-circle"></div>
+            Continue with Google
 
-            </div>
+        </button>
 
-            <!-- Signup -->
+        <div class="qr-box">
 
-            <p class="signup">
+            <h3>Log in instantly</h3>
 
-                New to Pinterest?
+            <p>
 
-                <a href="#">
-                    Join for free
-                </a>
+                Scan this QR code with your phone
+                to login on the app.
 
             </p>
 
-            <!-- Footer -->
+            <div class="qr-circle"></div>
 
-            <div class="footer-links">
+        </div>
 
-                <a href="#">Terms of Service</a>
+        <p class="signup">
 
-                &nbsp;·&nbsp;
+            New to Pinterest?
 
-                <a href="#">Privacy Policy</a>
+            <a href="#" id="joinNow">
+                Join for free
+            </a>
 
-                &nbsp;·&nbsp;
+        </p>
 
-                <a href="#">Notice at Collection</a>
+    </div>
 
-            </div>
+</section>
+
+<!-- ======================================================
+                    MAIN APPLICATION
+======================================================= -->
+
+<div id="app" class="hidden">
+
+<!-- ===================== SIDEBAR ====================== -->
+
+<aside class="sidebar">
+
+    <img src="pinterest_icon.png"
+    class="logo">
+
+    <div class="icon-box">
+
+        <a href="#"
+        class="nav-link active"
+        data-page="home">
+
+            <span class="material-icons-outlined">
+
+                home
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+            Home
+        </span>
+
+    </div>
+
+    <div class="icon-box">
+
+        <a href="#"
+        class="nav-link"
+        data-page="explore">
+
+            <span class="material-icons-outlined">
+
+                explore
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+
+            Explore
+
+        </span>
+
+    </div>
+
+    <div class="icon-box">
+
+        <a href="#"
+        class="nav-link"
+        data-page="boards">
+
+            <span class="material-icons-outlined">
+
+                dashboard
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+
+            My Boards
+
+        </span>
+
+    </div>
+
+    <div class="icon-box">
+
+        <a href="#">
+
+            <span class="material-icons-outlined">
+
+                add_box
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+
+            Create
+
+        </span>
+
+    </div>
+
+    <div class="icon-box">
+
+        <a href="#">
+
+            <span class="material-icons-outlined">
+
+                notifications
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+
+            Notifications
+
+        </span>
+
+    </div>
+
+    <div class="icon-box">
+
+        <a href="#">
+
+            <span class="material-icons-outlined">
+
+                chat_bubble_outline
+
+            </span>
+
+        </a>
+
+        <span class="tooltip">
+
+            Messages
+
+        </span>
+
+    </div>
+
+    <div class="bottom">
+
+        <div class="icon-box">
+
+            <a href="#">
+
+                <span class="material-icons-outlined">
+
+                    settings
+
+                </span>
+
+            </a>
+
+            <span class="tooltip">
+
+                Settings
+
+            </span>
 
         </div>
 
     </div>
 
+</aside>
+
+<!-- ====================== PAGE ===================== -->
+
+<div class="page">
+
+<header class="topbar">
+
+<div class="search-box">
+
+<span class="material-icons-outlined search-icon">
+
+search
+
+</span>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search ideas">
+
+<div class="top-icons">
+
+<span class="material-icons-outlined">
+
+photo_camera
+
+</span>
+
+<span class="material-icons-outlined">
+
+mic
+
+</span>
+
+</div>
+
+</div>
+
+<div class="profile" id="profileBtn">
+
+M
+
+</div>
+
+</header>
+
+<!-- =====================================================
+                    HOME PAGE
+===================================================== -->
+
+<section
+id="home"
+class="page-section active">
+
+<main class="content masonry">
+
+<div class="card">
+<img src="https://picsum.photos/300/500?random=1">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/350?random=2">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?random=3">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/600?random=4">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/460?random=5">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/520?random=6">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/380?random=7">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/640?random=8">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?random=9">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/550?random=10">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/430?random=11">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/620?random=12">
+</div>
+
+</main>
+
+</section>
+<!-- =====================================================
+                    EXPLORE PAGE
+===================================================== -->
+
+<section
+id="explore"
+class="page-section">
+
+<div class="content">
+
+<div class="heading">
+
+<h1>Explore</h1>
+
+<p>
+Discover new ideas and inspiration
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="card">
+
+<img src="images/img1.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img1.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/img2.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img2.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card tall">
+
+<img src="images/img3.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img3.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/img4.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img4.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/img5.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img5.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card tall">
+
+<img src="images/img6.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img6.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/img7.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img7.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/img8.png"
+alt="">
+
+<div class="overlay">
+
+<button>Save</button>
+
+<a href="images/img8.png"
+download
+class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+                    MY BOARDS PAGE
+===================================================== -->
+
+<section
+id="boards"
+class="page-section">
+
+<div class="content">
+
+<div class="profile-section">
+
+<img
+src="https://ui-avatars.com/api/?name=Mohit&background=ffd8e5&color=000&size=200"
+class="profile-image">
+
+<h1>Mohit Kumar</h1>
+
+<p>@mohit</p>
+
+<div class="buttons">
+
+<button class="share">
+
+Share
+
+</button>
+
+<button class="edit">
+
+Edit Profile
+
+</button>
+
+</div>
+
+</div>
+
+<div class="tabs">
+
+<span>
+
+Saved
+
+</span>
+
+<span class="active">
+
+Boards
+
+</span>
+
+</div>
+
+<div class="create-board">
+
+<button>
+
++
+
+Create Board
+
+</button>
+
+</div>
+
+<div class="boards">
+
+<div class="board">
+
+<img src="https://picsum.photos/300/620?random=13">
+
+<h3>Drawing</h3>
+
+<p>18 Pins</p>
+
+</div>
+
+<div class="board">
+
+<img src="https://picsum.photos/300/620?random=14">
+
+<h3>Puppy</h3>
+
+<p>24 Pins</p>
+
+</div>
+
+<div class="board">
+
+<img src="https://picsum.photos/300/620?random=15">
+
+<h3>Beach Night</h3>
+
+<p>12 Pins</p>
+
+</div>
+
+<div class="board">
+
+<img src="https://picsum.photos/300/620?random=16">
+
+<h3>Photography</h3>
+
+<p>30 Pins</p>
+
+</div>
+
+<div class="board">
+
+<img src="https://picsum.photos/500/500?random=99">
+
+<h3>Travel</h3>
+
+<p>44 Pins</p>
+
+</div>
+
+<div class="board">
+
+<img src="https://picsum.photos/500/500?random=100">
+
+<h3>Architecture</h3>
+
+<p>16 Pins</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
