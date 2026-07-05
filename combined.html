@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiWebPros Combined Pages</title>
+    <link rel="stylesheet" href="combined.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <div class="combined-layout">
+        <aside class="sidebar">
+            <img src="pinteresrt_icon.png" class="logo" alt="Pinterest logo">
+
+            <div class="icon-box">
+                <a href="#login" class="active" data-page-link="login">
+                    <span class="material-icons-outlined">account_circle</span>
+                </a>
+                <span class="tooltip">Login</span>
+            </div>
+
+            <div class="icon-box">
+                <a href="#home" data-page-link="home">
+                    <span class="material-icons-outlined">home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </div>
+
+            <div class="icon-box">
+                <a href="#explore" data-page-link="explore">
+                    <span class="material-icons-outlined">explore</span>
+                </a>
+                <span class="tooltip">Explore</span>
+            </div>
+
+            <div class="icon-box">
+                <a href="#saved" data-page-link="saved">
+                    <span class="material-icons-outlined">dashboard</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </div>
+
+            <div class="icon-box">
+                <a href="#notifications" data-page-link="notifications">
+                    <span class="material-icons-outlined">notifications</span>
+                </a>
+                <span class="tooltip">Notifications</span>
+            </div>
+
+            <div class="icon-box">
+                <a href="#messages" data-page-link="messages">
+                    <span class="material-icons-outlined">chat_bubble_outline</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </div>
+
+            <div class="bottom">
+                <div class="icon-box">
+                    <a href="#settings" data-page-link="settings">
+                        <span class="material-icons-outlined">settings</span>
+                    </a>
+                    <span class="tooltip">Settings</span>
+                </div>
+            </div>
+        </aside>
+
+        <div class="combined-main">
+            <header class="topbar">
+                <div class="search-box">
+                    <span class="material-icons-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search across combined pages">
+                </div>
+
+                <div class="top-right">
+                    <span class="material-icons-outlined">photo_camera</span>
+                    <span class="material-icons-outlined">mic</span>
+                    <div class="profile">M</div>
+                </div>
+            </header>
+
+            <main class="combined-sections">
+                <section id="login" class="combined-section page-view page-view-active" data-page="login">
+                    <div class="section-header">
+                        <div>
+                            <h2>Login</h2>
+                            <p>Merged from `index.html`.</p>
+                        </div>
+                    </div>
+                    <div class="section-body login-preview">
+                        <div class="login-page">
+                            <div class="login-container">
+                                <img src="pinteresrt_icon.png" alt="Pinterest Logo" class="login-logo">
+                                <h1>Welcome to Pinterest</h1>
+                                <p class="subtitle">Log in to discover more ideas just for you</p>
+
+                                <form action="#home">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Email" required>
+
+                                    <label>Password</label>
+                                    <div class="password-box">
+                                        <input type="password" placeholder="Password" required>
+                                        <span class="material-icons-outlined">visibility</span>
+                                    </div>
+
+                                    <a href="#" class="forgot">Forgot password?</a>
+                                    <button type="submit" class="login-btn">Log in</button>
+                                </form>
+
+                                <p class="or">OR</p>
+
+                                <button class="google-btn">
+                                    <img src="googleimage.png" alt="Google">
+                                    Continue with Google
+                                </button>
+
+                                <div class="qr-box">
+                                    <h3>Log in instantly</h3>
+                                    <p>Scan this QR code with your phone to log in on the app.</p>
+                                    <div class="qr-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="home" class="combined-section page-view" data-page="home">
+                    <div class="section-header">
+                        <div>
+                            <h2>Home Feed</h2>
+                            <p>Merged from `homepage.html`.</p>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="content">
+                            <div class="card"><img src="https://picsum.photos/300/450?random=1" alt="Pin 1"></div>
+                            <div class="card"><img src="https://picsum.photos/300/350?2" alt="Pin 2"></div>
+                            <div class="card"><img src="https://picsum.photos/300/500?random=3" alt="Pin 3"></div>
+                            <div class="card"><img src="https://picsum.photos/300/400?4" alt="Pin 4"></div>
+                            <div class="card"><img src="https://picsum.photos/300/600?random=5" alt="Pin 5"></div>
+                            <div class="card"><img src="https://picsum.photos/300/370?6" alt="Pin 6"></div>
+                            <div class="card"><img src="https://picsum.photos/300/450?random=7" alt="Pin 7"></div>
+                            <div class="card"><img src="https://picsum.photos/300/500?random=8" alt="Pin 8"></div>
+                            <div class="card"><img src="https://picsum.photos/300/350?random=9" alt="Pin 9"></div>
+                            <div class="card"><img src="https://picsum.photos/300/550?random=10" alt="Pin 10"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="explore" class="combined-section page-view" data-page="explore">
+                    <div class="section-header">
+                        <div>
+                            <h2>Explore</h2>
+                            <p>Merged from `explore.html`.</p>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <section class="gallery">
+                            <div class="card">
+                                <img src="images/img1.png" alt="Inspiration pin 1">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img1.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/img2.png" alt="Inspiration pin 2">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img2.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card tall">
+                                <img src="images/img3.png" alt="Inspiration pin 3">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img3.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/img4.png" alt="Inspiration pin 4">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img4.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/img5.png" alt="Inspiration pin 5">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img5.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card tall">
+                                <img src="images/img6.png" alt="Inspiration pin 6">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img6.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/img7.png" alt="Inspiration pin 7">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img7.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/img8.png" alt="Inspiration pin 8">
+                                <div class="overlay">
+                                    <button>Save</button>
+                                    <a href="images/img8.png" download class="download-btn"><i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="saved" class="combined-section page-view" data-page="saved">
+                    <div class="section-header">
+                        <div>
+                            <h2>Saved Boards</h2>
+                            <p>Merged from `saved.html`.</p>
+                        </div>
+                    </div>
+                    <div class="section-body saved-layout">
+                        <div class="profile">
+                            <div class="profile-avatar">M</div>
+                            <div>
+                                <h3>My Boards</h3>
+                                <p>Saved collections preview</p>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button class="share">Share</button>
+                            <button class="edit">Edit Profile</button>
+                        </div>
+
+                        <div class="tabs">
+                            <span>Saved</span>
+                            <span class="active">Boards</span>
+                        </div>
+
+                        <div class="create-board">
+                            <button>+ Create Board</button>
+                        </div>
+
+                        <div class="boards">
+                            <div class="board">
+                                <img src="board1.jpeg" alt="Drawing board">
+                                <h3>drawing</h3>
+                                <p>18 Pins</p>
+                            </div>
+                            <div class="board">
+                                <img src="board2.jpeg" alt="Puppy board">
+                                <h3>puppy</h3>
+                                <p>24 Pins</p>
+                            </div>
+                            <div class="board">
+                                <img src="board3.jpeg" alt="Beach night board">
+                                <h3>beach night</h3>
+                                <p>12 Pins</p>
+                            </div>
+                            <div class="board">
+                                <img src="board4.jpeg" alt="Photography board">
+                                <h3>Photography</h3>
+                                <p>30 Pins</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="notifications" class="combined-section page-view" data-page="notifications">
+                    <div class="section-header">
+                        <div>
+                            <h2>Notifications</h2>
+                            <p>Notification center preview.</p>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="info-panel">
+                            <div class="info-item">
+                                <span class="material-icons-outlined">favorite</span>
+                                <div>
+                                    <h3>New pin saved</h3>
+                                    <p>Your travel inspiration board was updated 5 minutes ago.</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">campaign</span>
+                                <div>
+                                    <h3>Trending alert</h3>
+                                    <p>Photography ideas are trending in your feed today.</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">person_add</span>
+                                <div>
+                                    <h3>New follower</h3>
+                                    <p>A creative profile just followed your saved boards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="messages" class="combined-section page-view" data-page="messages">
+                    <div class="section-header">
+                        <div>
+                            <h2>Messages</h2>
+                            <p>Message inbox preview.</p>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="info-panel">
+                            <div class="info-item">
+                                <span class="material-icons-outlined">chat</span>
+                                <div>
+                                    <h3>Design Team</h3>
+                                    <p>Can you share the beach-night board inspiration?</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">alternate_email</span>
+                                <div>
+                                    <h3>Collab Invite</h3>
+                                    <p>You have been invited to co-edit the drawing board.</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">mark_email_unread</span>
+                                <div>
+                                    <h3>Unread message</h3>
+                                    <p>A new message is waiting in your inbox.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="settings" class="combined-section page-view" data-page="settings">
+                    <div class="section-header">
+                        <div>
+                            <h2>Settings</h2>
+                            <p>Profile and preferences preview.</p>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="info-panel">
+                            <div class="info-item">
+                                <span class="material-icons-outlined">palette</span>
+                                <div>
+                                    <h3>Appearance</h3>
+                                    <p>Customize theme, layout, and browsing preferences.</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">security</span>
+                                <div>
+                                    <h3>Privacy</h3>
+                                    <p>Manage account security, visibility, and permissions.</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="material-icons-outlined">notifications_active</span>
+                                <div>
+                                    <h3>Alerts</h3>
+                                    <p>Choose which notifications and messages you receive.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        const pageLinks = document.querySelectorAll("[data-page-link]");
+        const pageViews = document.querySelectorAll(".page-view");
+
+        function showPage(pageName) {
+            pageViews.forEach((page) => {
+                page.classList.toggle("page-view-active", page.dataset.page === pageName);
+            });
+
+            pageLinks.forEach((link) => {
+                link.classList.toggle("active", link.dataset.pageLink === pageName);
+            });
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        pageLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                showPage(link.dataset.pageLink);
+            });
+        });
+    </script>
+</body>
+</html>
+
